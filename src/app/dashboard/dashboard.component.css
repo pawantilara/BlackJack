@@ -1,0 +1,32 @@
+
+.header{
+  
+    background: repeating-linear-gradient(to left, #000066 0%,#333300 100%);
+}
+.image_resize img{
+    border-radius: 10px;
+}
+.headTagLine{
+    
+    width:60%;
+    color:firebrick;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.total_bet{
+    color: white;
+    font-size: larger;
+    margin-left: 4rem;
+}
+.dashboard{
+    background: linear-gradient(to left, #093006 0%,#12570d 100%,#093206 0%);
+}
+.coin{
+    font-size: larger;
+    color: white;
+    width: 3rem;
+    text-align: center;
+    height: 3rem;
+    background-color: tomato;
+    border-radius: 500%;
+}

@@ -1,0 +1,10 @@
+.coin{
+    font-size: larger;
+    color: white;
+    width: 3rem;
+    text-align: center;
+    height: 3rem;
+    border-radius: 500%;
+    margin-left: 1rem;
+    
+}
