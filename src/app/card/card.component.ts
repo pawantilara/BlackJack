@@ -27,7 +27,22 @@ export class CardComponent implements OnInit {
   constructor() { }
   @Input() deck = 'Diamonds';
   @Input() value = 'A';
+  color = '';
+  glyph = '';
+  i = 0;
   ngOnInit() {
+    for ( this.i = 0; this.i < 4; this.i++) {
+      if (this.suits[this.i].name === this.deck)
+         {
+         this.color = this.suits[this.i].color;
+         this.glyph = this.suits[this.i].glyph;
+        }
+    }
+    console.log(this.color);
+    console.log(this.deck);
+    console.log(this.glyph);
   }
+  
+  
 
 }

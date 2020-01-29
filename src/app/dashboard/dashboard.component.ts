@@ -11,5 +11,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
+  open(){
+    console.log('apple');
+  }
 
 }
