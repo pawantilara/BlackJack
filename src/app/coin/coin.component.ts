@@ -8,9 +8,8 @@ import { Component, OnInit,Input } from '@angular/core';
 export class CoinComponent implements OnInit {
   @Input() color = 'red';
   @Input() num = '10';
+  @Input() flag = false;
   constructor() {
-    console.log(this.color);
-    console.log(this.num);
   }
 
   ngOnInit() {

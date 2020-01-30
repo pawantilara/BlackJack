@@ -1,42 +1,94 @@
-<div class = "container ml-5">
-<div class = 'row header'>
-    <div class = "col-sm-2">
-        <img  src = "assets/blackjack.jpg" width="100%"  height="100%"/>
-    </div>
-    
-    <div class = "col-sm-8 mt-4 headTagLine">
-        <h3>BLACKJACK</h3>
-    </div>
-</div>
- <div class = "row dashboard">
-    <div class = "row ">
-        <p class = "total_bet">$234</p>
-    </div>
-    <div class = "row mt-4 ">
-        <div class = "col-sm-4 ">
-            <app-coin color= "#172f39" [num]="10"></app-coin>
-           
-        </div>
-        <div class = "col-sm-8">
-            <h3 style = "color: white;">Place Your Bet</h3>
-        </div>
-</div>
-    
-    <div class = "row">
-        <div class = "col-sm-3">
-            <div class = "row ml-2">
-                <app-coin color= "#172f39" [num]="10" (click) = "open()"></app-coin>
-                <app-coin color= "#2d3440" [num]="20"></app-coin>
-                <app-coin color= "#3b454b" [num]="100"></app-coin>
-                <app-coin color= "#544f42" [num]="500"></app-coin>
-                
-             </div>
-        </div>
-        <div class = "col-sm-9">
-            <app-card deck="Hearts" value="J"></app-card>
-        </div>
+<div style = "background: linear-gradient(to left, #000066 0%,#333300 100%); width:100%; height:100%">
+<div class="container1 ">
+  <div class="row header">
+    <div class="col-sm-2">
+      <img src="assets/blackjack.jpg" width="100%" height="100%" />
     </div>
 
+    <div class="col-sm-8 mt-4 headTagLine">
+      <h3>BLACKJACK</h3>
+    </div>
+  </div>
+  <div class="dashboard ">
+    <div class="row ">
+      <p class="total_bet">Bet Amount: ${{ totalAmount }}</p>
+      <p class="total_bet">Remmaning Amount: $2500</p>
+    </div>
+    <div class="row ">
+      <div class="col-sm-3 " >
+        <div *ngIf = "start">
+        <app-coin color="{{ color }}" num="{{ num }}"></app-coin></div>
+      </div>
+      <div class="col-sm-7" *ngIf="!start">
+        <div class="row">
+          <div class="col-6">
+            <app-player></app-player>
+          </div>
+          <div class="col-6">
+            <app-dealer></app-dealer>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8" *ngIf="start">
+        <h3 class = "text_align">
+          Place Your Bet
+        </h3>
+        <button class="button button5" (click)="Deal()">Deal</button>
+      </div>
+    </div>
+
+    <div class="row" *ngIf = "start">
+      <div class="col-sm-5">
+        <div class="row">
+          <div *ngFor="let coin of coins">
+            <app-coin
+              color="{{ coin.color }}"
+              num="{{ coin.num }}"
+              (click)="open(coin)"
+              [flag]="bet"
+            ></app-coin>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard1 ">
+    <footer class="page-footer font-small teal pt-4">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+    
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold">Blackjack Game Strategy</h5>
+            <ol>
+              <li>Never play the Insurance button, it is a a loser's bet.</li>
+              <li>Almost always hit until you reach seventeen, especially if the dealer has a seven or higher.</li>
+              <li>If the Blackjack dealer has a four, five or six, don't take any chances! They're most likely to bust. Double your hand in these circumstances if you surely won't bust.</li>
+              <li>Turn on the advice in the bottom right corner for tips just like these!</li>
+            </ol>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-6 mb-md-0 mb-3">
+            <h5 class="text-uppercase font-weight-bold">BlackJack</h5>
+            <p>Welcome to 24/7 Blackjack! Blackjack, also known to some as twenty-one, 
+              is one of the most popular casino games around - and also super simple to learn! This easy to use, 
+              simple Blackjack game will certainly become your new favorite on the web!
+
+              Blackjack is a card game that pits player versus dealer. 
+              It is played with one or more decks of cards. Cards are counted as their respective numbers, 
+              face cards as ten, and ace as either eleven or one (in our game it will show on the counter as an 11 unless you are over 21). 
+              The object of Blackjack is the beat the dealer. This can be accomplished by getting Blackjack (first two cards equal 21) without dealer Blackjack,
+               having your final card count be higher than the dealers without exceeding 21, or by not exceeding 21 and dealer busting by exceeding their card count of 21.</p>
+    
+          </div>
+          <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+    
+      </div>
+    
+    </footer>
+  </div>
 </div>
 </div>
-  

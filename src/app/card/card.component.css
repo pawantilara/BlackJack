@@ -8,6 +8,9 @@
   padding: 4px;
   font-size: 20px;
   position: relative;
+  transform: rotateY(135deg);
+  transform: rotateX(135deg);
+  transform: rotateZ(45deg);
 }
 
 .card1.red {

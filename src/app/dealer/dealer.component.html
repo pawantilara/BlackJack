@@ -1,0 +1,9 @@
+<p class = "text_align">Dealer Points : {{dealerPoints}}</p>
+<div class = "row">
+    <div class = "col" *ngFor = "let card of dealer">
+        <app-card deck = {{card[1]}} value = {{card[0]}}></app-card>
+    </div>
+</div>
+    <div class = "row">
+    <app-coin color = "black" num = "Stand" (click) = "cards()"></app-coin>
+</div>

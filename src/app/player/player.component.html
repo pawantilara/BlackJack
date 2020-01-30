@@ -1,0 +1,10 @@
+<p class = "text_align">Player Points: {{playerPoints}}</p>
+<div class = "row">
+    <div class = "col" *ngFor = "let card of player">
+        <app-card deck = {{card[1]}} value = {{card[0]}}></app-card>
+    </div>
+</div>
+ <div class = "row">
+    <app-coin color = "black" num = "Hit" (click) = "cards()"></app-coin>
+
+</div>

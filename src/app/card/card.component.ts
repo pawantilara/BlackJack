@@ -38,11 +38,5 @@ export class CardComponent implements OnInit {
          this.glyph = this.suits[this.i].glyph;
         }
     }
-    console.log(this.color);
-    console.log(this.deck);
-    console.log(this.glyph);
   }
-  
-  
-
 }

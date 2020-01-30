@@ -1,10 +1,17 @@
-
+.container1{
+    width:10;
+}
 .header{
-  
-    background: repeating-linear-gradient(to left, #000066 0%,#333300 100%);
+   
+    background: linear-gradient(to left, #000066 0%,#333300 100%);
 }
 .image_resize img{
     border-radius: 10px;
+}
+.text_align{
+    color: white; 
+    margin-left:10rem;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .headTagLine{
     
@@ -19,14 +26,40 @@
     margin-left: 4rem;
 }
 .dashboard{
+    height:100%;
+    width:100%;
     background: linear-gradient(to left, #093006 0%,#12570d 100%,#093206 0%);
+}
+.dashboard1{
+    height:20rem;
+    width:100%;
+    color:white;
 }
 .coin{
     font-size: larger;
     color: white;
-    width: 3rem;
+    width: 4rem;
     text-align: center;
-    height: 3rem;
-    background-color: tomato;
+    height: 4rem;
+    background-color: darkslategray;
     border-radius: 500%;
+    transform: translateX(-40%);
+    display:inline-block;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    
 }
+.button {
+    background-color: darkslategray;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    margin-left:10rem;
+  }
+  .button5 {border-radius: 50%;}
+
